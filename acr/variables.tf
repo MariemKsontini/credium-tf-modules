@@ -8,11 +8,6 @@ variable "acr_name" {
   type        = string
 }
 
-variable "tags" {
-  description = "This Object is used to store information about the running deployment. Resources will be tagged with it"
-  type        = map(string)
-}
-
 variable "acr_token_name" {
   description = "Name of the acr token resource"
   type        = string
@@ -49,7 +44,7 @@ variable "zone_redundancy_enabled" {
 }
 
 variable "public_network_access_enabled" {
- description = "Enabling public access for ACR. If this variable is set to 'false' then we need to set IP rules to blank (ip_rules = []) in the repository which will refer pkt-cloud-migration-tf-modules as source."
+ description = "Enabling public access for ACR. If this variable is set to 'false' then we need to set IP rules to blank (ip_rules = []) in the repository which will refer credium-tf-modules as source."
  type        = bool
  default     = false
 }

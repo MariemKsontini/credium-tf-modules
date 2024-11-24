@@ -4,7 +4,6 @@ resource "azurerm_container_registry" "acr" {
   location                      = var.location
   sku                           = "Premium"
   admin_enabled                 = false
-  tags                          = var.tags
   public_network_access_enabled = var.public_network_access_enabled
 
 
@@ -13,7 +12,6 @@ resource "azurerm_container_registry" "acr" {
     content {
       location                = georeplications.value
       zone_redundancy_enabled = var.zone_redundancy_enabled
-      tags                    = var.tags
     }
   }
 

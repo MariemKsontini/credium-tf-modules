@@ -44,11 +44,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
       }
     }
   }
-
-  identity {
-    type         = "UserAssigned"
-    identity_ids = [var.user_assigned_identity_id]
-  }
 }
 
 resource "azurerm_kubernetes_cluster_node_pool" "aks" {
@@ -68,7 +63,6 @@ resource "azurerm_kubernetes_cluster_node_pool" "aks" {
   max_count             = each.value.enable_auto_scaling ? each.value.node_max_count : null
   enable_node_public_ip = local.enable_node_public_ip
   os_disk_type          = var.os_disk_type
-  tags                  = var.tags
   upgrade_settings {
     max_surge = var.max_surge
   }

@@ -38,7 +38,7 @@ A module to create an [Azure container registry](https://registry.terraform.io/p
 | <a name="input_location"></a> [location](#input\_location) | Azure location where the resources are deployed in | `string` | `"westeurope"`                                                                             |    no    |
 | <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | Name of the resource group in which the ACR should be created | `string` | n/a                                                                                        |   yes    |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | List of subnet IDs from which network access to the ACR will be allowed | `set(string)` | `[]`                                                                                       |    no    |
-| <a name="input_public_network_access_enabled"></a> [public\_network\_access\_enabled](#input\_public\_network\_access\_enabled) | Enabling public access for ACR. If this variable is set to 'false' then we need to set IP rules to blank (ip_rules = []) in the repository which will refer pkt-cloud-migration-tf-modules as source. | `bool` | `false` |   yes    | yes |
+| <a name="input_public_network_access_enabled"></a> [public\_network\_access\_enabled](#input\_public\_network\_access\_enabled) | Enabling public access for ACR. If this variable is set to 'false' then we need to set IP rules to blank (ip_rules = []) in the repository which will refer credium-tf-modules as source. | `bool` | `false` |   yes    | yes |
 
 ## Outputs
 

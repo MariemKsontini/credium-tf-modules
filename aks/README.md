@@ -40,12 +40,6 @@
 | <a name="input_only_critical_addons_enabled"></a> [only\_critical\_addons\_enabled](#input\_only\_critical\_addons\_enabled) | only critical addons enabled for default node pool | `bool` | `false` | no |
 | <a name="input_orchestrator_version"></a> [orchestrator\_version](#input\_orchestrator\_version) | Orchestrator version | `string` | `"1.22.4"` | no |
 | <a name="input_os_disk_size_gb"></a> [os\_disk\_size\_gb](#input\_os\_disk\_size\_gb) | The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created | `number` | `64` | no |
-| <a name="input_os_disk_type"></a> [os\_disk\_type](#input\_os\_disk\_type) | Possible values: Ephemeral, Managed. The type of disk which should be used for the Operating System. | `string` | `"Managed"` | no |
-| <a name="input_pod_cidr_range"></a> [pod\_cidr\_range](#input\_pod\_cidr\_range) | Valid CIDR range for pod IP assignments inside the cluster.` | n/a | yes |
-| <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | Name of an existing resource group. The resource will be created in the same location as the resource group | `string` | n/a | yes |
-| <a name="input_sku"></a> [sku](#input\_sku) | SKU of AKS API Server. 'Free'= 99,95% or 'Paid' = 99,9% | `string` | `"Free"` | no |
-| <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | Azure resources id of the subnet where the aks is created in | `string` | n/a | yes |
-| <a name="input_user_assigned_identity_id"></a> [user\_assigned\_identity\_id](#input\_user\_assigned\_identity\_id) | User assigned identity id that is used to create the AKS cluster in the BMW Vnet | `string` | n/a | yes |
 
 ## Outputs
 

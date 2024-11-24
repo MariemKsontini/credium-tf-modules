@@ -7,3 +7,4 @@ This repository provides a blueprint for Azure infrastructure setup using Terraf
 - [Log Analytics Workspace](./log_analytics/readme.md)
 - [Azure resource groups](./rg/readme.md)
 
+# credium-tf-modules

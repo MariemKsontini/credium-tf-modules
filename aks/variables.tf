@@ -14,11 +14,6 @@ variable "location" {
   default     = "westeurope"
 }
 
-variable "tags" {
-  description = "This Object is used to store information about the running deployment. Resources will be tagged with it. (Further information can be found [here](https://atc.bmwgroup.net/confluence/pages/viewpage.action?spaceKey=ARCHINNO&title=Terraform+Guidelines))"
-  type        = map(string)
-}
-
 variable "aks_name" {
   description = "Name of the AKS"
   type        = string
@@ -84,11 +79,6 @@ variable "only_critical_addons_enabled" {
   default     = false
 }
 
-variable "user_assigned_identity_id" {
-  description = "User assigned identity id that is used to create the AKS cluster in the BMW Vnet"
-  type        = string
-}
-
 variable "enable_auto_scaling" {
   description = "Enable autoscaling on vm node pool. When set to true max_count and min_count needs to be defined"
   type        = bool
@@ -129,11 +119,6 @@ variable "automatic_channel_upgrade" {
   description = "The upgrade channel for this Kubernetes Cluster"
   type        = string
   default     = null
-}
-
-variable "pod_cidr_range" {
-  description = "Valid CIDR range for pod IP assignments inside the cluster. Relevant for multiple clusters (blue-green) in one VNet. First cluster can use e.g. '10.244.0.0/16', second one '10.245.0.0/16'. Please check https://atc.bmwgroup.net/confluence/display/OTDLPA/Two+AKS-Clusters+in+the+same+VNET+with+network-plugin+kubenet+be+aware for more details."
-  type        = string
 }
 
 variable "max_surge" {
